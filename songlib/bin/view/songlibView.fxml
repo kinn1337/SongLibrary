@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #DDDDDD;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.songlibController">
+   <children>
+      <ListView fx:id="mainList" layoutX="128.0" layoutY="287.0" prefHeight="384.0" prefWidth="1024.0" style="-fx-border-color: black; -fx-border-width: 2;" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="128.0" AnchorPane.rightAnchor="128.0" AnchorPane.topAnchor="287.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </ListView>
+      <ButtonBar buttonMinWidth="60.0" layoutX="97.0" layoutY="15.0" prefHeight="64.0" prefWidth="1086.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2;" AnchorPane.leftAnchor="97.0" AnchorPane.rightAnchor="97.0" AnchorPane.topAnchor="15.0">
+         <buttons>
+            <Label fx:id="curr_songname" prefHeight="32.0" prefWidth="256.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 8; -fx-background-insets: 0;" text="SONG_NAME" ButtonBar.buttonData="LEFT">
+               <font>
+                  <Font name="Apple Symbols" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="curr_songartist" prefHeight="32.0" prefWidth="256.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 8; -fx-background-insets: 0;" text="SONG_ARTIST" ButtonBar.buttonData="LEFT">
+               <font>
+                  <Font name="Apple Symbols" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="curr_songalbum" prefHeight="32.0" prefWidth="256.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 8; -fx-background-insets: 0;" text="SONG_ALBUM" ButtonBar.buttonData="LEFT">
+               <font>
+                  <Font name="Apple Symbols" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="curr_songyear" prefHeight="32.0" prefWidth="256.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 8; -fx-background-insets: 0;" text="SONG_YEAR" ButtonBar.buttonData="LEFT">
+               <font>
+                  <Font name="Apple Symbols" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+         </buttons>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="8.0" left="15.0" right="15.0" top="8.0" />
+         </padding>
+      </ButtonBar>
+      <GridPane layoutX="213.0" layoutY="94.0" prefWidth="854.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-background-color: white;" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="213.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.0" minWidth="10.0" prefWidth="128.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1105.0" minWidth="10.0" prefWidth="711.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="curr_songname1" alignment="CENTER" prefHeight="20.0" prefWidth="128.0" text="NAME:">
+               <font>
+                  <Font name="Apple Symbols" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="curr_songname11" alignment="CENTER" prefHeight="20.0" prefWidth="128.0" text="ARTIST:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Apple Symbols" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="curr_songname12" alignment="CENTER" prefHeight="20.0" prefWidth="128.0" text="ALBUM:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Apple Symbols" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="curr_songname13" alignment="CENTER" prefHeight="20.0" prefWidth="128.0" text="YEAR:" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Apple Symbols" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="songNameIn" maxWidth="684.0" prefWidth="512.0" style="-fx-border-color: black;" GridPane.columnIndex="1" />
+            <TextField fx:id="songArtistIn" maxWidth="684.0" prefWidth="512.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="songAlbumIn" maxWidth="684.0" prefWidth="512.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="songYearIn" maxWidth="684.0" prefWidth="512.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </GridPane>
+      <Button layoutX="1202.0" layoutY="17.0" maxHeight="24.0" maxWidth="64.0" mnemonicParsing="false" onAction="#editItem" prefHeight="24.0" prefWidth="64.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 2; -fx-background-color: white; -fx-background-insets: 0;" text="EDIT" textAlignment="CENTER" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font name="Apple Symbols" size="12.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button layoutX="1202.0" layoutY="52.0" maxHeight="24.0" maxWidth="64.0" mnemonicParsing="false" onAction="#deleteItem" prefHeight="24.0" prefWidth="64.0" style="-fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 2; -fx-background-color: white; -fx-background-insets: 0;" text="DELETE" textAlignment="CENTER">
+         <font>
+            <Font name="Apple Symbols" size="12.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+      <Button layoutX="1088.0" layoutY="154.0" maxHeight="24.0" maxWidth="64.0" mnemonicParsing="false" onAction="#addItem" prefHeight="24.0" prefWidth="64.0" style="-fx-border-color: black; -fx-border-radius: 2; -fx-border-width: 2; -fx-background-color: white; -fx-background-insets: 0;" text="ADD" textAlignment="CENTER">
+         <font>
+            <Font name="Apple Symbols" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
